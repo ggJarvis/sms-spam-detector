@@ -1,62 +1,33 @@
-SMS Spam Detector - README
-📱 Project Description
-A machine learning project that classifies SMS messages as spam or ham (not spam) using natural language processing techniques and a trained classifier.
-🚀 Features
-•	• Text preprocessing (stop word removal, stemming, vectorization)
-•	• Model training and evaluation
-•	• Real-time message prediction via command-line or UI (if included)
-•	• Streamlit web app (if applicable)
-•	• Easy-to-follow structure
-📂 Project Structure
+SMS Detection is a machine learning project aimed at classifying SMS (Short Message Service) messages as either spam or ham (non-spam). This helps in filtering unwanted messages and improving user experience and security.
 
-sms-spam-detector/
-│
-├── data/
-│   └── spam.csv                 # Dataset file
-│
-├── models/
-│   └── spam_classifier.pkl      # Trained ML model
-│
-├── notebooks/
-│   └── EDA_and_Modeling.ipynb   # Jupyter Notebook for training
-│
-├── app.py                       # Streamlit or CLI app script
-├── preprocessing.py             # Text cleaning functions
-├── requirements.txt             # Python dependencies
-└── README.md                    # Project documentation
+📌 Project Overview Spam Guardian is a machine learning-based web application developed using Streamlit. It classifies SMS and email messages as spam or not spam using natural language processing (NLP) and a trained classification model. The application highlights message characteristics and offers safety recommendations based on the prediction.
 
-⚙️ Setup Instructions
-1. 📥 Clone the repository
-git clone https://github.com/your-username/sms-spam-detector.git
-cd sms-spam-detector
-2. 🐍 Create a virtual environment (optional but recommended)
-python -m venv venv
-source venv/bin/activate      # For Linux/Mac
-venv\Scripts\activate         # For Windows
-3. 📦 Install dependencies
-pip install -r requirements.txt
-4. ▶️ Run the application
-If using a Streamlit app:
-streamlit run app.py
+🚀 Features • • Streamlit-powered web interface for real-time predictions • • Custom CSS styling for enhanced user experience • • Message analysis: word count, character count, exclamations, URL count • • Probability prediction and spam confidence score • • Visual indicators and recommendations based on analysis • • Detection of suspicious patterns like urgency, financial terms, contact requests, etc.
 
-If using command-line:
-python app.py
-📊 Dataset
-The dataset used is the classic SMS Spam Collection Dataset from UCI Machine Learning Repository:
-Link to dataset: https://archive.ics.uci.edu/ml/datasets/sms+spam+collection
-🧠 Algorithms Used
-•	• CountVectorizer or TfidfVectorizer
-•	• Naive Bayes or Logistic Regression (based on your model)
-•	• Accuracy, Precision, Recall, F1 Score for evaluation
-✅ Example Usage
-You can enter a message like:
+📁 Project Structure
 
-"Congratulations! You've won a free ticket to Bahamas!"
+├── mail_data.csv → Dataset file
 
-And the model will predict:
+├── model.pkl → Trained classification model
 
-**Label: Spam**
-📌 Future Improvements
-•	• Deploy using Flask/Streamlit on Heroku or Render
-•	• Use deep learning (e.g., LSTM)
-•	• Add dataset upload option
+├── vectorizer.pkl → TF-IDF vectorizer for text
+
+├── sms-Detection.ipynb → Jupyter Notebook (EDA, training, evaluation)
+
+├── Sms-app.py → Streamlit app script
+
+└── README.docx → This documentation file
+
+⚙️ Installation & Setup Follow the steps below to set up and run the project locally: • • Clone the Repository: git clone https://github.com/your-username/sms-spam-detector.git • • Navigate to the Project Directory: cd sms-spam-detector • • (Optional) Create a Virtual Environment: python -m venv venv source venv/bin/activate # macOS/Linux venv\Scripts\activate # Windows • • Install Dependencies: pip install -r requirements.txt • • Run the Streamlit App: streamlit run Sms-app.py
+
+🧾 Dataset The project uses the SMS Spam Collection dataset, which contains labeled SMS messages as 'spam' or 'ham'. The dataset is loaded from 'mail_data.csv' and processed during model training.
+
+🧠 Model & Techniques The model uses the following techniques and tools: • • Natural Language Processing: tokenization, stop word removal, stemming • • Vectorization using TF-IDF • • Model: Naive Bayes Classifier • • Evaluation metrics: accuracy, confusion matrix, precision, recall
+
+⚙️ How It Works
+
+User inputs a message into the text box.
+The message is cleaned (lowercased, tokenized, stop words removed, stemmed).
+Transformed text is vectorized using TF-IDF.
+Model predicts whether it's spam or not, and displays the confidence.
+Visual indicators and tips are shown based on the analysis.
