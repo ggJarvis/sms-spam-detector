@@ -18,7 +18,12 @@ SMS Detection is a machine learning project aimed at classifying SMS (Short Mess
 
 └── README.docx → This documentation file
 
-⚙️ Installation & Setup Follow the steps below to set up and run the project locally: • • Clone the Repository: git clone https://github.com/your-username/sms-spam-detector.git • • Navigate to the Project Directory: cd sms-spam-detector • • (Optional) Create a Virtual Environment: python -m venv venv source venv/bin/activate # macOS/Linux venv\Scripts\activate # Windows • • Install Dependencies: pip install -r requirements.txt • • Run the Streamlit App: streamlit run Sms-app.py
+⚙️ Installation & Setup Follow the steps below to set up and run the project locally:
+• • Clone the Repository: git clone https://github.com/your-username/sms-spam-detector.git
+
+• • Navigate to the Project Directory: cd sms-spam-detector • • (Optional) Create a Virtual Environment: python -m venv venv source venv/bin/activate # macOS/Linux venv\Scripts\activate # Windows 
+
+• • Install Dependencies: pip install -r requirements.txt • • Run the Streamlit App: streamlit run Sms-app.py
 
 🧾 Dataset The project uses the SMS Spam Collection dataset, which contains labeled SMS messages as 'spam' or 'ham'. The dataset is loaded from 'mail_data.csv' and processed during model training.
 
@@ -26,8 +31,8 @@ SMS Detection is a machine learning project aimed at classifying SMS (Short Mess
 
 ⚙️ How It Works
 
-User inputs a message into the text box.
-The message is cleaned (lowercased, tokenized, stop words removed, stemmed).
-Transformed text is vectorized using TF-IDF.
-Model predicts whether it's spam or not, and displays the confidence.
-Visual indicators and tips are shown based on the analysis.
+1-User inputs a message into the text box.
+2-The message is cleaned (lowercased, tokenized, stop words removed, stemmed).
+3-Transformed text is vectorized using TF-IDF.
+4-Model predicts whether it's spam or not, and displays the confidence.
+5-Visual indicators and tips are shown based on the analysis.
